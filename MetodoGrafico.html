@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Método gráfico · Métodos de Investigación de Operaciones</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/styleNav.css" />
+    <link rel="stylesheet" href="css/styleMG.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body data-page="grafico">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Métodos de Investigación de Operaciones, inicio">
+        <span class="brand-mark" aria-hidden="true">IO</span>
+        <span>Métodos de Investigación de Operaciones</span>
+      </a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Abrir menú"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+        <a href="index.html" data-page="inicio">Inicio</a>
+        <a href="MetodoGrafico.html" data-page="grafico">Método gráfico</a>
+        <a href="ProgramacionLineal.html" data-page="simplex">Programación lineal</a>
+        <a href="Simplex.html" data-page="tabla-simplex">Método simplex</a>
+        <a href="PenalizacionM.html" data-page="metodo-m">Penalización M</a>
+        <a href="Transporte.html" data-page="transporte">Transporte</a>
+        <a href="Hungaro.html" data-page="hungaro">Método Húngaro</a>
+      </nav>
+    </header>
+    <header class="page-heading">
+      <div>
+        <h1>Método gráfico · Programación lineal</h1>
+        <p>
+          Se grafican las restricciones, se hallan los vértices de la región
+          factible y se evalúa Z en cada uno.
+        </p>
+      </div>
+    </header>
+    <main>
+      <section class="card">
+        <h2>Planteamiento</h2>
+        <div class="row" id="obj">
+          <select id="tipo" aria-label="Tipo de problema">
+            <option value="max">Max</option>
+            <option value="min">Min</option></select
+          ><span>Z =</span><span id="oc"></span>
+        </div>
+        <p style="margin: 10px 0 2px">Sujeto a:</p>
+        <div id="rows"></div>
+        <label class="row"
+          ><input id="nn" type="checkbox" checked style="width: auto" /> Todas
+          las variables ≥ 0</label
+        >
+        <div class="bar">
+          <button id="solve" type="button">Resolver</button>
+          <button id="add" type="button" class="s">Agregar restricción</button>
+          <button id="clr" type="button" class="s">Limpiar</button>
+        </div>
+      </section>
+      <section id="out" aria-live="polite">
+        <p class="hint">
+          Captura la función objetivo y las restricciones, y presiona Resolver.
+          Un campo vacío cuenta como 0.
+        </p>
+      </section>
+    </main>
+    <script src="js/metodo_grafico.js"></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+/* Ajuste del menú principal para pantallas intermedias (más enlaces). */
+@media (min-width: 761px) and (max-width: 1180px) {
+	.site-nav { gap: 2px; }
+	.site-nav a { padding: 8px 8px; font-size: 13px; }
+}

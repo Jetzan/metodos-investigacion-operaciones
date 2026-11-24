@@ -1,0 +1,291 @@
+/* Método gráfico: mismo diseño que el resto de las herramientas (paleta azul, tipografía del sistema,
+   tarjetas, campos y botones). Solo estilos: no cambia el contenido ni el funcionamiento. */
+:root {
+  /* Paleta compartida con las demás páginas */
+  --b50: #f5f9ff;
+  --b100: #e8f1fe;
+  --b200: #cfe2fc;
+  --b300: #a9c9f7;
+  --b400: #6ea4ee;
+  --b500: #3b82e6;
+  --b600: #2468c9;
+  --b700: #1b519f;
+  --b900: #0f2f5e;
+  /* Nombres que usan el contenido y la gráfica */
+  --bg: #ffffff;
+  --soft: var(--b50);
+  --ink: var(--b900);
+  --mut: var(--b600);
+  --pri: var(--b300);
+  --pri2: var(--b100);
+  --line: var(--b200);
+  --bad: var(--b700);
+  color-scheme: light;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+html {
+  scroll-padding-top: env(safe-area-inset-top, 0px);
+}
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--b900);
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Encabezado de la página */
+.page-heading {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px 20px 0;
+  background: none;
+  border: 0;
+}
+.page-heading h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--b700);
+}
+.page-heading p {
+  margin: 0;
+  color: var(--b400);
+  font-size: 14px;
+}
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 20px 72px;
+  display: grid;
+  gap: 16px;
+}
+
+/* Tarjetas y secciones */
+.card {
+  background: #fff;
+  border: 1px solid var(--b200);
+  border-radius: 8px;
+  padding: 24px;
+}
+main h2 {
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--b700);
+}
+#out .card {
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+#out .card h2 {
+  margin: 0 0 14px;
+  font-size: 16px;
+}
+#out .card p {
+  margin: 0 0 10px;
+}
+#out .card > :last-child {
+  margin-bottom: 0;
+}
+
+/* Formulario */
+.row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 8px 0;
+}
+#oc {
+  display: contents;
+}
+main input,
+main select {
+  font: inherit;
+  color: var(--b900);
+  background: #fff;
+  border: 1px solid var(--b200);
+  border-radius: 6px;
+  padding: 8px 10px;
+  width: 72px;
+  outline: none;
+}
+main select {
+  width: auto;
+}
+main input:focus,
+main select:focus {
+  border-color: var(--b500);
+  background: var(--b50);
+}
+main input:focus-visible,
+main select:focus-visible,
+main button:focus-visible {
+  outline: 2px solid var(--b300);
+  outline-offset: 1px;
+}
+
+/* Botones */
+main button {
+  font: inherit;
+  border: 1px solid var(--b600);
+  border-radius: 6px;
+  padding: 9px 20px;
+  background: var(--b600);
+  color: #fff;
+  cursor: pointer;
+}
+main button:hover {
+  background: var(--b700);
+}
+main button.s {
+  background: #fff;
+  color: var(--b600);
+  border-color: var(--b300);
+}
+main button.s:hover {
+  background: var(--b50);
+}
+main button.x {
+  background: transparent;
+  border-color: transparent;
+  color: var(--b400);
+  padding: 6px 9px;
+}
+main button.x:hover {
+  background: var(--b50);
+  color: var(--b700);
+}
+.bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  align-items: center;
+}
+
+/* Resultados */
+.m {
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+.v {
+  background: var(--b50);
+  border: 1px solid var(--b200);
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin: 8px 0;
+}
+.v p {
+  margin: 2px 0;
+}
+.box {
+  overflow-x: auto;
+}
+main table {
+  border-collapse: collapse;
+  font-size: 15px;
+  min-width: 60%;
+}
+main th,
+main td {
+  border: 1px solid var(--b200);
+  padding: 6px 14px;
+  text-align: center;
+  white-space: nowrap;
+}
+main th {
+  background: var(--b100);
+  color: var(--b700);
+  font-weight: 600;
+}
+tr.best td {
+  background: var(--b100);
+  font-weight: 600;
+  color: var(--b700);
+}
+.res {
+  border: 1.5px solid var(--b600);
+  border-radius: 10px;
+  padding: 14px 20px;
+  background: var(--b50);
+}
+.res b:first-child {
+  color: var(--b600);
+}
+.res.no {
+  border: 0;
+  border-left: 3px solid var(--b600);
+  border-radius: 0;
+  background: var(--b100);
+  color: var(--b700);
+  padding: 8px 12px;
+}
+.res.no b:first-child {
+  color: var(--b700);
+}
+.bad {
+  color: var(--b700);
+}
+.card.bad {
+  background: var(--b100);
+  border: 0;
+  border-left: 3px solid var(--b600);
+  border-radius: 0;
+  padding: 8px 12px;
+}
+.hint {
+  color: var(--b400);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Gráfica */
+main svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+main svg text {
+  font:
+    12px system-ui,
+    sans-serif;
+  fill: var(--b600);
+}
+main svg .vl {
+  font-weight: 700;
+  fill: var(--b900);
+  font-size: 14px;
+}
+.lg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--b600);
+}
+.lg i {
+  display: inline-block;
+  width: 18px;
+  height: 4px;
+  margin-right: 6px;
+  vertical-align: middle;
+  border-radius: 2px;
+}

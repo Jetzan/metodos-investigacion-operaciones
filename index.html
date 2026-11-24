@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Explora herramientas interactivas para resolver problemas de programación lineal."
+    />
+    <title>Métodos de Investigación de Operaciones · Inicio</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/styleNav.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body data-page="inicio">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Métodos de Investigación de Operaciones, inicio">
+        <span class="brand-mark" aria-hidden="true">IO</span>
+        <span>Métodos de Investigación de Operaciones</span>
+      </a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Abrir menú"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+        <a href="index.html" data-page="inicio">Inicio</a>
+        <a href="MetodoGrafico.html" data-page="grafico">Método gráfico</a>
+        <a href="ProgramacionLineal.html" data-page="simplex">Programación lineal</a>
+        <a href="Simplex.html" data-page="tabla-simplex">Método simplex</a>
+        <a href="PenalizacionM.html" data-page="metodo-m">Penalización M</a>
+        <a href="Transporte.html" data-page="transporte">Transporte</a>
+        <a href="Hungaro.html" data-page="hungaro">Método Húngaro</a>
+      </nav>
+    </header>
+
+    <main class="welcome">
+      <section class="welcome-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Herramientas para aprender y resolver</p>
+          <h1>Encuentra la mejor solución, paso a paso.</h1>
+          <p class="hero-description">
+            Explora métodos de programación lineal con herramientas
+            interactivas que te ayudan a plantear y entender cada problema.
+          </p>
+          <a class="button button-primary" href="MetodoGrafico.html">
+            Elegir un método <span aria-hidden="true">→</span>
+          </a>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="graph-card">
+            <div class="graph-label">Región factible</div>
+            <svg viewBox="0 0 360 245" role="presentation">
+              <path class="grid-lines" d="M48 20v190M98 20v190M148 20v190M198 20v190M248 20v190M298 20v190M48 20h270M48 70h270M48 120h270M48 170h270" />
+              <path class="axis-lines" d="M48 210h270M48 210V20" />
+              <path class="constraint-line line-one" d="M70 35l220 155" />
+              <path class="constraint-line line-two" d="M70 165l220-105" />
+              <path class="feasible-area" d="M116 67l104 74-54 41-111-44z" />
+              <circle class="optimal-point" cx="220" cy="141" r="6" />
+            </svg>
+            <div class="graph-legend">
+              <span><i class="legend-area"></i> Soluciones posibles</span>
+              <span><i class="legend-point"></i> Óptimo</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="methods-section" aria-labelledby="methods-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Empieza aquí</p>
+            <h2 id="methods-title">Elige cómo resolver</h2>
+          </div>
+          <p>Selecciona el método que mejor se adapte a tu problema.</p>
+        </div>
+        <div class="method-grid">
+          <a class="method-card" href="MetodoGrafico.html">
+            <span class="method-icon graph-icon" aria-hidden="true">↗</span>
+            <span class="method-tag">Visual e intuitivo</span>
+            <h3>Método gráfico</h3>
+            <p>
+              Representa las restricciones, explora la región factible y
+              encuentra los vértices óptimos.
+            </p>
+            <span class="method-link">Abrir herramienta <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="method-card" href="ProgramacionLineal.html">
+            <span class="method-icon simplex-icon" aria-hidden="true">∑</span>
+            <span class="method-tag">Solución detallada</span>
+            <h3>Programación lineal</h3>
+            <p>
+              Sigue la transformación del modelo y revisa las soluciones
+              básicas para problemas de mayor tamaño.
+            </p>
+            <span class="method-link">Abrir herramienta <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="method-card" href="Simplex.html">
+            <span class="method-icon simplex-icon" aria-hidden="true">Σ</span>
+            <span class="method-tag">Tablas paso a paso</span>
+            <h3>Método simplex</h3>
+            <p>
+              Resuelve con tablas simplex: variable que entra, variable que
+              sale, operaciones entre filas y solución final.
+            </p>
+            <span class="method-link">Abrir herramienta <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="method-card" href="PenalizacionM.html">
+            <span class="method-icon graph-icon" aria-hidden="true">M</span>
+            <span class="method-tag">Restricciones ≥ y =</span>
+            <h3>Penalización M</h3>
+            <p>
+              Agrega variables artificiales penalizadas con M para resolver
+              modelos con restricciones mayores o iguales.
+            </p>
+            <span class="method-link">Abrir herramienta <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="method-card" href="Transporte.html">
+            <span class="method-icon graph-icon" aria-hidden="true">⇄</span>
+            <span class="method-tag">Soluciones iniciales</span>
+            <h3>Problemas de transporte</h3>
+            <p>
+              Obtén una solución básica factible inicial con los métodos de
+              Esquina Noroeste y Costo Mínimo, paso a paso.
+            </p>
+            <span class="method-link">Abrir herramienta <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="method-card" href="Hungaro.html">
+            <span class="method-icon simplex-icon" aria-hidden="true">H</span>
+            <span class="method-tag">Asignación óptima</span>
+            <h3>Método Húngaro</h3>
+            <p>
+              Resuelve problemas de asignación con reducción de filas y
+              columnas, cobertura de ceros y asignaciones óptimas.
+            </p>
+            <span class="method-link">Abrir herramienta <span aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">IO</span>
+          <div>
+            <h2>Métodos de Investigación de Operaciones</h2>
+            <p>Aprende, plantea y resuelve.</p>
+          </div>
+        </div>
+
+        <section class="footer-section" aria-labelledby="academic-title">
+          <h3 id="academic-title">Información académica</h3>
+          <dl class="academic-grid">
+            <div>
+              <dt>Carrera</dt>
+              <dd>Ingeniería en Sistemas Computacionales</dd>
+            </div>
+            <div>
+              <dt>Curso</dt>
+              <dd>Investigación de Operaciones</dd>
+            </div>
+            <div>
+              <dt>Docente</dt>
+              <dd>Luis Flavio Saúl Moreno Antillón</dd>
+            </div>
+            <div>
+              <dt>Grupo</dt>
+              <dd>7°-B</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="footer-section" aria-labelledby="team-title">
+          <h3 id="team-title">Integrantes</h3>
+          <ul class="team-grid">
+            <li><span>Ángel Gael Andrade Ovalle</span><span class="member-id">516300</span></li>
+            <li><span>Hugo Ernesto Delgado Lucio</span><span class="member-id">435016</span></li>
+            <li><span>Jetzan Azael Esquivel</span><span class="member-id">436826</span></li>
+            <li><span>Joshua Alexander Sierra Veloz</span><span class="member-id">302168</span></li>
+          </ul>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

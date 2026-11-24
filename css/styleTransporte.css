@@ -1,0 +1,47 @@
+/* Estilos adicionales para Transporte y Método Húngaro.
+   Se cargan después de stylePL.css y reutilizan sus variables. */
+
+/* Formularios con tabla */
+table.tpform { border-collapse: separate; border-spacing: 6px; }
+table.tpform th { color: var(--b700); font-weight: 600; font-size: 14px; padding: 0 6px; white-space: nowrap; text-align: center; }
+table.tpform input { width: 72px; text-align: center; }
+table.tpform input.lab { width: 96px; font-weight: 600; color: var(--b700); }
+.mpl-form-wrap, #mplForm { overflow-x: auto; }
+
+/* Tabla de transporte */
+table.tp { border-collapse: collapse; font-size: 15px; }
+table.tp th, table.tp td { border: 1px solid var(--b200); text-align: center; }
+table.tp th { background: var(--b100); color: var(--b700); font-weight: 600; padding: 6px 12px; white-space: nowrap; }
+table.tp td.c { position: relative; min-width: 78px; height: 56px; padding: 6px 10px; }
+table.tp td.c.on { background: var(--b100); }
+table.tp .cost { position: absolute; top: 2px; left: 6px; font-size: 11px; color: var(--b400); }
+table.tp .v { font-weight: 700; color: var(--b900); font-size: 16px; }
+table.tp .x { color: var(--b300); }
+table.tp td.rem { background: var(--b50); color: var(--b700); padding: 6px 12px; white-space: nowrap; font-size: 14px; }
+table.tp td.rem s { color: var(--b400); margin-right: 4px; }
+
+/* MPL de transporte / asignación */
+.mplt { display: inline-block; font-size: 16px; }
+.mplt-row { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 8px; }
+.mplt .kw { font-weight: 600; color: var(--b600); min-width: 36px; }
+.mplt .kw.sa { font-weight: 400; color: var(--b400); font-size: 15px; }
+.mplt-cons { display: flex; gap: 40px; flex-wrap: wrap; }
+.mplt-cons > div > div, .mplt-row > div > div { white-space: nowrap; }
+.mplt .nn { color: var(--b700); }
+
+ol.stepl { margin: 0; padding-left: 22px; color: var(--b900); }
+ol.stepl li { margin-bottom: 6px; }
+.sec p.step-note { font-size: 14px; color: var(--b700); margin: 8px 0 0; }
+
+/* Matrices del método húngaro */
+table.hm { border-collapse: collapse; font-size: 15px; }
+table.hm th, table.hm td { border: 1px solid var(--b200); padding: 6px 16px; text-align: center; white-space: nowrap; }
+table.hm th { background: var(--b100); color: var(--b700); font-weight: 600; }
+table.hm th.cov { background: var(--b200); }
+table.hm td.z { font-weight: 700; color: var(--b700); }
+table.hm td.cr, table.hm td.cc { background: var(--b100); }
+table.hm td.cx { background: var(--b200); }
+table.hm td.dn { color: var(--b600); }
+table.hm td.up { font-weight: 600; }
+table.hm td.ext { background: var(--b50); color: var(--b600); font-size: 13px; }
+table.hm td.pick { background: var(--b200); box-shadow: inset 0 0 0 2px var(--b600); }

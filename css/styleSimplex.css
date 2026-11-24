@@ -1,0 +1,19 @@
+/* Estilos adicionales para Método simplex y Penalización por M.
+   Se cargan después de stylePL.css y reutilizan sus variables. */
+
+.mpl-form .opfix { display: inline-block; width: 64px; text-align: center; color: var(--b600); font-weight: 600; }
+
+table.simp { border-collapse: collapse; font-size: 14px; min-width: 60%; }
+table.simp th, table.simp td { border: 1px solid var(--b200); padding: 5px 10px; text-align: center; white-space: nowrap; }
+table.simp th { background: var(--b100); color: var(--b700); font-weight: 600; }
+table.simp th.ent { background: var(--b200); }
+table.simp td.op { text-align: left; color: var(--b600); font-size: 13px; }
+table.simp td.bs { font-weight: 600; color: var(--b700); background: var(--b50); }
+table.simp tr.zrow td { background: var(--b50); }
+table.simp td.pivot { background: var(--b200); font-weight: 700; color: var(--b900); box-shadow: inset 0 0 0 2px var(--b600); }
+table.simp td.rat { color: var(--b600); }
+table.simp tr.lev td.rat { font-weight: 600; color: var(--b700); }
+table.simp small { font-weight: 400; color: var(--b400); }
+
+.step-note { margin: 10px 0 0; font-size: 14px; color: var(--b700); }
+.zeq { margin: 14px 0 10px; }

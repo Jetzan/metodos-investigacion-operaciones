@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Método simplex · Métodos de Investigación de Operaciones</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/styleNav.css">
+    <link rel="stylesheet" href="css/stylePL.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body data-page="simplex">
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Métodos de Investigación de Operaciones, inicio">
+            <span class="brand-mark" aria-hidden="true">IO</span>
+            <span>Métodos de Investigación de Operaciones</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+            <a href="index.html" data-page="inicio">Inicio</a>
+            <a href="MetodoGrafico.html" data-page="grafico">Método gráfico</a>
+            <a href="ProgramacionLineal.html" data-page="simplex">Programación lineal</a>
+            <a href="Simplex.html" data-page="tabla-simplex">Método simplex</a>
+            <a href="PenalizacionM.html" data-page="metodo-m">Penalización M</a>
+            <a href="Transporte.html" data-page="transporte">Transporte</a>
+            <a href="Hungaro.html" data-page="hungaro">Método Húngaro</a>
+        </nav>
+    </header>
+    <div class="wrap">
+        <header>
+        <h1>Método de Programación lineal</h1>
+        </header>
+
+        <ol class="stepper">
+        <li id="ind1" class="active"><span>1</span>Tipo y tamaño</li>
+        <li id="ind2"><span>2</span>Llenar el MPL</li>
+        <li id="ind3"><span>3</span>Solución</li>
+        </ol>
+
+        <!-- PASO 1 -->
+        <section id="step1" class="card">
+        <h2>Modelo de programación lineal</h2>
+        <form id="cfg">
+            <div class="field">
+            <label class="lbl-title">¿Qué se hace con Z?</label>
+            <div class="seg">
+                <label><input type="radio" name="sense" value="max" checked><span>Maximizar</span></label>
+                <label><input type="radio" name="sense" value="min"><span>Minimizar</span></label>
+            </div>
+            </div>
+            <div class="row2">
+            <div class="field">
+                <label class="lbl-title" for="nVars">Número de variables</label>
+                <input id="nVars" type="number" min="1" max="6" value="2">
+            </div>
+            <div class="field">
+                <label class="lbl-title" for="nCons">Número de restricciones</label>
+                <input id="nCons" type="number" min="1" max="6" value="2">
+            </div>
+            </div>
+            <p class="hint">Hasta 6 variables y 6 restricciones. Todas las variables se consideran ≥ 0.</p>
+            <div class="actions"><button type="submit" class="btn primary">Continuar</button></div>
+        </form>
+        </section>
+
+        <!-- PASO 2 -->
+        <section id="step2" class="card" hidden>
+        <h2>Llena el MPL</h2>
+        <p class="hint">Puedes escribir enteros, decimales (1.5) o fracciones (3/4). Un campo vacío cuenta como 0.</p>
+        <form id="mpl">
+            <div id="mplForm" class="mpl-form"></div>
+            <p id="err" class="err" hidden></p>
+            <div class="actions">
+            <button type="button" id="back1" class="btn ghost">Atrás</button>
+            <button type="submit" class="btn primary">Resolver</button>
+            </div>
+        </form>
+        </section>
+
+        <!-- PASO 3 -->
+        <section id="step3" hidden>
+        <div id="result"></div>
+        <div class="actions">
+            <button type="button" id="edit" class="btn ghost">Editar el modelo</button>
+            <button type="button" id="restart" class="btn primary">Nuevo problema</button>
+        </div>
+        </section>
+    </div>
+
+    <script src="js/programacion_lineal.js"></script>
+</body>
+</html>
